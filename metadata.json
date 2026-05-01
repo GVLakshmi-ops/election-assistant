@@ -1,0 +1,6 @@
+{
+  "name": "Election Assistant",
+  "description": "An interactive tool to help users navigate election processes, timelines, and registration steps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
