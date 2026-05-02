@@ -5,12 +5,14 @@
 
 import { Vote } from "lucide-react";
 
+type Tab = "guide" | "faq" | "chatbot";
+
 interface NavbarProps {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
+  activeTab: Tab;
+  setActiveTab: (tab: Tab) => void;
 }
 
-const TABS = [
+const TABS: { id: Tab; label: string }[] = [
   { id: "guide", label: "Election Guide" },
   { id: "faq",   label: "FAQ" },
   { id: "chatbot", label: "Chatbot" },

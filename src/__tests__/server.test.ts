@@ -86,7 +86,7 @@ function buildApp(hasGemini = false) {
   });
 
   app.post("/api/chat", (req: Request, res: Response) => {
-    const { message, userContext } = req.body as { message: unknown; userContext?: unknown };
+    const { message } = req.body as { message: unknown; userContext?: unknown };
     if (!message || typeof message !== "string") return res.status(400).json({ error: "Message is required." });
     const clean = sanitise(message);
     if (!clean) return res.status(400).json({ error: "Message cannot be empty." });
